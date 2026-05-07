@@ -1,0 +1,158 @@
+:root {
+  --color-yellow: #fbce51;
+  --color-black: #1f1f1f;
+  --color-red: #f54932;
+  --color-light-bg: #e9d4a4;
+  --color-light-bg-alt: #e5d4c1;
+  --color-white: #ffffff;
+  --color-gray: #d9d9d9;
+  --color-blue: #3057a2;
+  --color-gray-text: #313131;
+  --color-footer-bg: #e9ded4;
+
+  --font-golos: "Golos Text", sans-serif;
+  --font-merriweather: "Merriweather", serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-golos);
+  color: var(--color-black);
+  line-height: 120%;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 28px 0;
+  transition: transform 0.3s ease;
+}
+
+.header.header--hidden {
+  transform: translateY(-100%);
+}
+
+.container {
+  max-width: 1222px;
+  margin: 0 auto;
+}
+
+.logo {
+  width: 245px;
+  height: 36px;
+}
+
+.running-line {
+  background-color: var(--color-red);
+  padding: 18px 0;
+  overflow: hidden;
+}
+
+.running-line-track {
+  display: flex;
+  animation: running-line-scroll 20s linear infinite;
+  white-space: nowrap;
+}
+
+.running-line-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.running-line-item {
+  font-family: var(--font-merriweather);
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 110%;
+  color: var(--color-white);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.running-line-dot {
+  color: var(--color-white);
+  font-size: 6px;
+}
+
+@keyframes running-line-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.footer {
+  background-color: var(--color-footer-bg);
+}
+
+.footer-container {
+  padding: 40px 72px 72px;
+}
+
+.footer-text {
+  font-size: 12px;
+  line-height: 150%;
+  font-weight: 400;
+  color: var(--color-gray-text);
+  opacity: 0.6;
+}
+
+@media (max-width: 1366px) {
+  .header {
+    padding: 20px 0;
+  }
+
+  .logo {
+    width: 213px;
+    height: 32px;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .running-line {
+    padding: 10px 0;
+  }
+
+  .running-line-item {
+    font-size: 16px;
+  }
+
+  .footer-container {
+    padding: 40px 20px 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 12px 0;
+  }
+
+  .footer {
+    padding: 30px 0;
+  }
+}

@@ -1,0 +1,149 @@
+.game {
+  padding: 80px 0;
+  background-color: var(--color-white);
+}
+
+.game-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 44px;
+}
+
+.game-image {
+  width: 100%;
+  max-width: 474px;
+  aspect-ratio: 0.9;
+}
+
+.game-info {
+  flex: 1;
+}
+
+.game-title {
+  font-family: var(--font-merriweather);
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 110%;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.game-title-red {
+  color: var(--color-red);
+  display: block;
+  font-weight: 700;
+}
+
+.game-table {
+  margin-bottom: 32px;
+}
+
+.game-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid var(--color-gray);
+}
+
+.game-row:first-child {
+  border-top: 1px solid var(--color-gray);
+}
+
+.game-label {
+  font-size: 18px;
+  line-height: 130%;
+  color: var(--color-gray-text);
+  opacity: 0.6;
+  padding: 16px 20px 16px 0;
+  border-right: 1px solid var(--color-gray);
+}
+
+.game-value {
+  font-size: 18px;
+  line-height: 130%;
+  font-weight: 500;
+  color: var(--color-black);
+  padding: 16px 0 16px 20px;
+}
+
+.game-value del {
+  color: var(--color-black);
+  text-decoration-color: var(--color-red);
+  margin-right: 8px;
+}
+
+.game-contact {
+  font-size: 18px;
+  line-height: 130%;
+  color: var(--color-blue);
+}
+
+@media (max-width: 890px) {
+  .game-content {
+    flex-direction: column;
+  }
+
+  .game-image {
+    width: 100%;
+  }
+
+  .game-title {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .game {
+    padding: 60px 0;
+  }
+
+  .game-content {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .game-image {
+    width: 100%;
+  }
+
+  .game-title {
+    font-size: 28px;
+    margin-bottom: 32px;
+  }
+
+  .game-row {
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+    padding: 16px 0;
+  }
+
+  .game-row:first-child {
+    border-top: none;
+  }
+
+  .game-row:last-child {
+    border-bottom: none;
+  }
+
+  .game-label {
+    font-size: 16px;
+    padding: 0;
+    border-right: none;
+  }
+
+  .game-value {
+    font-size: 16px;
+    text-align: left;
+    padding: 0;
+  }
+
+  .game-contact {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 375px) {
+  .game-title {
+    font-size: 24px;
+  }
+}

@@ -1,0 +1,252 @@
+.hero {
+  padding: 124px 0 0;
+  min-height: 700px;
+  position: relative;
+  background-color: var(--color-light-bg-alt);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("../assets/image/hero-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  mix-blend-mode: color-burn;
+  z-index: 0;
+}
+
+.hero-content {
+  z-index: 1;
+  position: relative;
+}
+
+.hero-image {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  padding: 0 168px;
+  object-fit: cover;
+}
+
+.hero-title {
+  font-family: var(--font-merriweather);
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 110%;
+  max-width: 542px;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.hero-title-end {
+  display: block;
+  text-align: center;
+}
+
+.hero-description {
+  font-size: 18px;
+  line-height: 130%;
+  font-weight: 400;
+  max-width: 542px;
+  margin-top: 24px;
+  text-align: center;
+}
+
+.hero-buttons {
+  display: flex;
+  column-gap: 16px;
+  margin-top: 40px;
+  justify-content: flex-start;
+}
+
+.btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-golos);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 130%;
+  text-decoration: none;
+  border-radius: 66px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  height: 72px;
+  padding: 0 24px;
+  text-align: center;
+}
+
+.btn-primary {
+  width: 263px;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  border-color: var(--color-black);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-yellow);
+  border-color: var(--color-yellow);
+  color: var(--color-black);
+}
+
+.btn-secondary {
+  width: 263px;
+  background-color: transparent;
+  color: var(--color-black);
+  border-color: var(--color-black);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+@media (hover: none) {
+  .btn-primary:hover,
+  .btn-secondary:hover {
+    background-color: var(--color-black);
+    color: var(--color-white);
+  }
+
+  .btn-secondary:hover {
+    background-color: transparent;
+    color: var(--color-black);
+  }
+}
+
+@media (max-width: 1366px) {
+  .hero {
+    min-height: 600px;
+  }
+
+  .hero-title {
+    font-size: 52px;
+  }
+
+  .hero-description {
+    font-size: 16px;
+  }
+
+  .hero-image {
+    padding: 0;
+    object-fit: cover;
+  }
+
+  .btn {
+    height: 64px;
+    padding: 0 24px;
+  }
+
+  .btn-primary {
+    width: 240px;
+  }
+
+  .btn-secondary {
+    width: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 80px 0 0;
+    min-height: auto;
+  }
+
+  .hero-container {
+    position: relative;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-title {
+    font-size: 36px;
+    line-height: 110%;
+  }
+
+  .hero-title-end {
+    padding: 0 12px;
+  }
+
+  .hero-description {
+    font-size: 16px;
+    margin-top: 16px;
+    margin-bottom: 24px;
+    text-align: left;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .hero-buttons a {
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+    height: 47px;
+    padding: 12px 24px;
+    flex-direction: row;
+    column-gap: 5px;
+  }
+
+  .btn-primary {
+    width: 100%;
+  }
+
+  .btn-secondary {
+    width: 100%;
+    background-color: var(--color-white);
+    color: var(--color-black);
+    border-color: var(--color-white);
+    opacity: 0.9;
+  }
+
+  .btn-secondary:hover {
+    border-color: var(--color-black);
+  }
+
+  .hero-image {
+    position: relative;
+    z-index: 1;
+    padding: 0;
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: 90%;
+  }
+}
+
+@media (max-width: 375px) {
+  .hero {
+    padding: 72px 0 0;
+  }
+
+  .hero-title {
+    font-size: 28px;
+  }
+
+  .hero-description {
+    font-size: 14px;
+  }
+
+  .btn {
+    font-size: 14px;
+  }
+}
