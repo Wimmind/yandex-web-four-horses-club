@@ -95,6 +95,17 @@ a {
   font-size: 6px;
 }
 
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.scroll-animate.animate-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 @keyframes running-line-scroll {
   0% {
     transform: translateX(0);
